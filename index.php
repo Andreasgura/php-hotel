@@ -1,14 +1,21 @@
 <?php
 include __DIR__ ."/Models/steam.php";
 
-if (isset($_GET["ParkingFilter"])) {
 $filteredHotels = $hotels;
-   $parkingFilter = $_GET["ParkingFilter"];
+if (isset($_GET["parkingFilter"])) {
+
+   $parkingFilter = $_GET["parkingFilter"];
    if ($parkingFilter == "true") {
     $filteredHotels = array_filter($hotels, function ($hotel) {
         return $hotel["parking"] == true; 
     }); 
-   }
+
+   } else if ($parkingFilter == "false") {
+    $filteredHotels = array_filter($hotels, function ($hotel) {
+        return $hotel["parking"] == false; 
+    }); 
+   } 
+
 }
 
 include __DIR__ . "/Views/head.php";
@@ -26,6 +33,7 @@ include __DIR__ . "/Views/head.php";
                 <option value="true">Hotel con parcheggio</option>
                 <option value="false">Hotels senza parcheggio</option>
             </select>
+            <button type="submit" class="btn btn-primary">Filtra</button>
         </form>
         <?= include __DIR__ . "/Views/table.php" ?>
     </main>
