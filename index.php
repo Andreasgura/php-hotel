@@ -2,7 +2,7 @@
 include __DIR__ ."/Models/steam.php";
 
 if (isset($_GET["ParkingFilter"])) {
-    $filteredHotels = $hotels;
+$filteredHotels = $hotels;
    $parkingFilter = $_GET["ParkingFilter"];
    if ($parkingFilter == "true") {
     $filteredHotels = array_filter($hotels, function ($hotel) {

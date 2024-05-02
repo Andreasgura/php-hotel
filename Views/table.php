@@ -16,7 +16,7 @@ foreach ($hotels[0] as $key => $value) {
         </tr>
     </thead>
     <?php
-    foreach ($hotels as $hotel) {
+    foreach ($filteredHotels as $hotel) {
         echo "<tr>";
         foreach ($hotel as $value) {
             echo "<td>$value</td>";
