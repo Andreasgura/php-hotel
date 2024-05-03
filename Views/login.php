@@ -10,7 +10,11 @@ include __DIR__ . "/./head.php";
 <?php if (isset($errorMessage)) {
      echo "<div class='alert alert-danger text-center'>$errorMessage</div>";
     }
-    ?>
+?>
+<?php if (isset($_GET["logout"])) {
+    echo "<div class='alert alert-success text-center'>Logout effettuato correttamente</div>";
+}
+?>
 <div class="d-flex justify-content-center align-items-center">
     
     
