@@ -5,8 +5,15 @@ include __DIR__ . "/./head.php";
 
 ?>
 
+<main class="container my-5">
 
+<?php if (isset($errorMessage)) {
+     echo "<div class='alert alert-danger text-center'>$errorMessage</div>";
+    }
+    ?>
 <div class="d-flex justify-content-center align-items-center">
+    
+    
     <form id="loginform" action="login.php" method="POST">
         <!-- <img class="mb-4" src="./images/mobile-logo.png" alt="logo" width="100"> -->
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
@@ -23,6 +30,8 @@ include __DIR__ . "/./head.php";
 
     </form>
 </div>
+
+</main>
 
 </body>
 </html>
