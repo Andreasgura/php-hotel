@@ -1,4 +1,6 @@
 <?php
+include __DIR__ . "/../Controller/loginController.php";
+
 include __DIR__ . "/./head.php";
 
 ?>

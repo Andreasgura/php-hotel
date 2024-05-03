@@ -1,5 +1,6 @@
 <?php
-header("location: ./Views/login.php");
+
+// header("location: ./Views/login.php");
 include __DIR__ ."/Models/steam.php";
 
 $filteredHotels = $hotels;
