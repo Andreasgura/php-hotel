@@ -39,7 +39,7 @@ include __DIR__ . "/Views/head.php";
 
 
 <main class="container">
-    <!-- <div class="d-flex justify-content-end mb-2"><a href="./Views/logout.php" class="btn btn-danger">Logout</a></div>
+    <div class="d-flex justify-content-end mb-2"><a href="./Views/logout.php" class="btn btn-danger">Logout</a></div>
     <h1 class="text-center mb-5">Hotel List</h1>
     <form action="index.php" method="GET" class="d-flex flex-column form-group">
         <select class="form-select mb-5" aria-label="Default select example" name="parkingFilter">
@@ -50,7 +50,7 @@ include __DIR__ . "/Views/head.php";
         <label for="voteFilter">Filtra per voto</label>
         <input type="number" min="1" max="5" name="voteFilter" class="mb-2">
         <button type="submit" class="btn btn-primary mb-5">Filtra</button>
-    </form> -->
+    </form>
     <?php include __DIR__ . "/Views/table2.php" ?>
     
 </main>
